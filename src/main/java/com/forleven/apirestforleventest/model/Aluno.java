@@ -1,6 +1,8 @@
-package com.forleven.apirestforleventest.models;
+package com.forleven.apirestforleventest.model;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -24,7 +26,8 @@ public class Aluno implements Serializable {
 	private String nome;
 	@Column(name="nm_sobrenome", nullable=true)
 	private String sobrenome;
-
+	@Column(name="nr_telefone", nullable=false)
+	
 	
 	public int getMatricula() {
 		return matricula;

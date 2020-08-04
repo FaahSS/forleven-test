@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.forleven.apirestforleventest.models.Aluno;
+import com.forleven.apirestforleventest.model.Aluno;
 import com.forleven.apirestforleventest.repository.AlunoRepository;
 
 @RestController

@@ -4,7 +4,7 @@ import java.util.List;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.forleven.apirestforleventest.models.Aluno;
+import com.forleven.apirestforleventest.model.Aluno;
 
 public interface AlunoRepository extends JpaRepository<Aluno, Integer> {
 	
