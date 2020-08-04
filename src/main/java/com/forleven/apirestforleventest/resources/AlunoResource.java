@@ -15,7 +15,9 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.forleven.apirestforleventest.models.Aluno;
+import com.forleven.apirestforleventest.models.Telefone;
 import com.forleven.apirestforleventest.repository.AlunoRepository;
+import com.forleven.apirestforleventest.repository.TelefoneRepository;
 
 @RestController
 @RequestMapping("api")
@@ -24,12 +26,12 @@ public class AlunoResource {
 	private AlunoRepository alunoRepository;
 	
 	//GET
-	@GetMapping("alunos")
-	public List<Aluno> listaAlunos(){
+	@GetMapping("aluno/all")
+	public List<Aluno> listarAlunos(){
 		return alunoRepository.findAll();
 	}
 	
-	@GetMapping("{codigo}")
+	@GetMapping("aluno/{codigo}")
 	public Aluno buscar(@PathVariable int codigo) {
 		return alunoRepository.findById(codigo).get();
 	}
@@ -42,14 +44,14 @@ public class AlunoResource {
 	}
 	
 	//PUT
-	@PutMapping("{id}")
+	@PutMapping("aluno/edit/{id}")
 	public Aluno atualizar(@RequestBody Aluno aluno, @PathVariable int id) {
 		aluno.setMatricula(id);
 		return alunoRepository.save(aluno);
 	}
 	
 	//DELETE
-	@DeleteMapping("{codigo}")
+	@DeleteMapping("aluno/delete/{codigo}")
 	public void remover(@PathVariable int codigo) {
 		alunoRepository.deleteById(codigo);
 	}
