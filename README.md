@@ -1,4 +1,4 @@
-#Markdown Application.Properties MySQL Default
+# Application.Properties MySQL Default
 
 spring.jpa.properties.hibernate.jdbc.lob.non_contextual_creation=true
 
